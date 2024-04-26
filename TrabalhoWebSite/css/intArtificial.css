@@ -11,19 +11,7 @@ body {
 
 #div-geral {
     margin: 0 auto;
-    width: 90%;
-    background-color: rgba(0, 132, 255,0.2);
-    border-radius: 10px;
-    margin-top: 60px;
-    margin-bottom: 10px;
-}
-
-/*Geral*/
-.sub-titulo {
-    text-align: center;
-}
-
-hr {
+    margin-top: 60px; 
     width: 90%;
 }
 
@@ -42,29 +30,26 @@ header, .navbar {
    font-weight: bold; 
 }
 
-/*secao*/
-.section {
-    padding: 5px;
+/*textos*/
+.texto-p {
+    text-align: justify;
+}
+
+#div-grid-img {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-
-.section > img {
-    width: 95%;
-    height: 300px;
-    border-radius: 10px;
-}
-
-.section> div > p {
-    margin: 0 auto;
-    width: 98%;
     text-align: justify;
+}
+
+#div-grid-img> img {
+    margin: 0 auto;
 }
 
 /*Rado pe*/
 footer {
     background-color: var(--base);
     position: absolute;
+    bottom: -1;
     width: 100%;
 }
 
@@ -74,20 +59,29 @@ footer > p {
     margin-top: 0.8%;
 }
 
-@media (max-width: 500px) {
-    #titulo {
-        font-size: 16px;
-    }
-
-    .section {
+@media (max-width: 900px) {
+    #div-grid-img {
         grid-template-columns: 1fr;
     }
 
-    .section > img {
+    #div-grid-img > img {
+       margin-bottom: 10px;
+       width: 95%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    #h4-dife {
+        text-align: center;
+    }
+
+    #div-grid-img {
+        grid-template-columns: 1fr;
+    }
+
+    #div-grid-img > img {
         width: 99%;
     }
 
-    footer {
-        margin-bottom: -200%;
-    }
 }

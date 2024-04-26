@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning</title>
+    <link rel="stylesheet" href="css/machineLearning.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--script-->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.12.0/dist/tf.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container" id="nav-container">
+            <!--add essa class-->
+            <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+                <div id="titulo">Machine Learning</div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
+                    aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" id="contact-menu" href="index.html">Voltar</a>
+                        <a class="nav-item nav-link a" id="home-menu" href="inteligenciaArtificial.html">Inteligência
+                            artificial</span></a>
+                        <a class="nav-item nav-link" id="contact-menu" href="chatbot.html">Chat bot</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div id="div-geral">
+        <div id="div-img">
+            <img src="imgs/machineLearning.PNG" alt="">
+        </div>
+        <br>
+        <h3>O que e Machine Learning?</h3>
+        <p class="texto-p">
+            Machine Learning (ML), ou Aprendizado de Máquina, é um subcampo da inteligência artificial (IA) que se
+            concentra no desenvolvimento de algoritmos e técnicas que permitem aos computadores aprenderem a partir de
+            dados e realizar tarefas específicas sem serem explicitamente programados para cada uma delas.
+        </p>
+        <p class="texto-p">
+            O cerne do Machine Learning está na capacidade dos algoritmos de identificar padrões nos dados e usar esses
+            padrões para fazer previsões ou tomar decisões. Esses algoritmos são alimentados com grandes volumes de
+            dados de treinamento, nos quais são apresentados exemplos rotulados ou não rotulados para aprenderem com
+            eles.
+        </p>
+        <p class="texto-p">
+            Existem três principais tipos de aprendizado em Machine Learning: supervisionado, não supervisionado e por
+            reforço. No aprendizado supervisionado, os algoritmos são treinados em um conjunto de dados rotulado, onde
+            cada exemplo de entrada é associado a uma saída desejada. No aprendizado não supervisionado, os algoritmos
+            tentam encontrar padrões intrínsecos nos dados sem a orientação de rótulos. Já no aprendizado por reforço,
+            os algoritmos aprendem a realizar ações em um ambiente para maximizar uma recompensa.
+        </p>
+        <p class="texto-p">
+            Os algoritmos de Machine Learning são aplicados em uma ampla variedade de campos e setores, incluindo
+            reconhecimento de padrões, processamento de linguagem natural, visão computacional, medicina, finanças,
+            entre outros. Eles são utilizados para realizar tarefas como classificação, regressão, clusterização,
+            detecção de anomalias, recomendação e muito mais.
+        </p>
+        <p class="texto-p">
+            Embora o Machine Learning ofereça oportunidades significativas para automatizar tarefas e tomar decisões
+            baseadas em dados, também apresenta desafios, como a necessidade de grandes conjuntos de dados de alta
+            qualidade, o viés nos dados e modelos, a interpretabilidade dos resultados e a privacidade dos dados.
+        </p>
+        <p class="texto-p">
+            À medida que a tecnologia avança e novas técnicas são desenvolvidas, o Machine Learning continua a
+            desempenhar um papel fundamental na transformação digital de empresas e na criação de soluções inovadoras
+            para uma ampla gama de problemas do mundo real.
+        </p>
+
+        <h3>Exemplo de código de machine Learning:</h3>
+        <p>O código abaixo é um exemplo de machine Learning feito em javaScript.</p>
+        <div id="div-grid-codigo">
+            <div class="clas-codigos">
+                <ul>
+                    <li>// Modelo de regressão linear</li>
+                    <li>const model = tf.sequential();</li>
+                    <li>model.add(tf.layers.dense({ units: 1, inputShape: [1] }));</li>
+                    <li></li>
+                    <li>// Compilando o modelo</li>
+                    <li>model.compile({ optimizer: 'sgd', loss: 'meanSquaredError' });</li>
+                    <li></li>
+                    <li>// Dados de treinamento (preço da casa vs. número de quartos)</li>
+                    <li>const xs = tf.tensor2d([1, 2, 3, 4, 5], [5, 1]);</li>
+                    <li>const ys = tf.tensor2d([300000, 400000, 500000, 600000, 700000], [5, 1]);</li>
+                    <li></li>
+                    <li>// Treinando o modelo</li>
+                    <li>async function trainModel() {</li>
+                    <li> await model.fit(xs, ys, { epochs: 1000 });</li>
+                    <li> console.log('Modelo treinado!');</li>
+                    <li>}</li>
+                    <li></li>
+                    <li>// Fazendo previsões com o modelo treinado</li>
+                    <li>function preverPreco() {</li>
+                    <li> const numQuartos = parseInt(document.getElementById('numQuartos')
+                        .value);</li>
+                    <li> const input = tf.tensor2d([[numQuartos]]);</li>
+                    <li> const output = model.predict(input);</li>
+                    <li> const precoPrevisto = output.dataSync()[0];</li>
+                    <li> document.getElementById('resultado').innerText = `Preço Previsto:$${precoPrevisto.toFixed(2)}`;
+                    </li>
+                    <li>}</li>
+                    <li></li>
+                    <li>// Treinando o modelo ao carregar a página</li>
+                    <li>trainModel();</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Vamos entender o código.</h3>
+                <p>
+                <h5>1. Definição do Modelo de Regressão Linear:</h5>
+                utilizando a biblioteca TensorFlow.js. Criamos um modelo que possui uma única camada densa (fully
+                connected) com um
+                neurônio (units: 1) e uma única entrada (inputShape: [1]). Isso significa que estamos construindo um
+                modelo para prever um valor numérico (o preço da casa) com base em uma única variável de entrada (o
+                número de quartos).
+                </p>
+                <p>
+                <h5>2. Compilação do Modelo:</h5>
+                O modelo com um otimizador SGD (Stochastic Gradient Descent) e uma função de perda de erro quadrático
+                médio (mean squared error). Isso define como o modelo será treinado e avaliado durante o processo de
+                treinamento.
+                </p>
+                <p>
+                <h5>3. Dados de Treinamento:</h5>
+                definindo os dados de treinamento para o modelo. xs representa o número de quartos das casas e ys
+                representa os preços correspondentes das casas.
+                </p>
+                <p>
+                <h5>4. Treinamento do Modelo:</h5>
+                função assíncrona trainModel é responsável por treinar o modelo. Estamos chamando model.fit para ajustar
+                o modelo aos dados de treinamento. Especificamos 1000 épocas de treinamento para iterar sobre os dados
+                várias vezes e ajustar os pesos do modelo.
+                </p>
+                <p>
+                <h5>5. Previsão de Preço:</h5>
+                Quando o usuário clica no botão "Prever Preço", a função é chamada. Ela extrai o número de quartos
+                fornecido pelo usuário, cria um tensor TensorFlow apropriado para o modelo, faz uma previsão usando o
+                modelo treinado e exibe o preço previsto da casa na página HTML.
+                </p>
+                <p>
+                <h5>6. Chamada Inicial da Função de Treinamento:</h5>
+                E finalmente, chamamos a função "trainModel" de treinamento quando a página é carregada inicialmente
+                para
+                iniciar o processo de treinamento do modelo.
+                </p>
+                <p>
+            </div>
+        </div>
+        <h2 id="titulo-ml">Agora Chegou a Hora de Testa:</h2>
+        <p id="p-subTitulo">Este Programa calcula o valor do imóvel com base na quantidade de quartos.</p>
+        <div id="codigo-exe">
+            <p id="resposta"></p>
+            <input type="number" id="txtInput">
+            <button onclick="preverPreco()" id="btnExecutar">executar programa</button>
+        </div>
+    </div>
+    <!--Rado pe-->
+    <footer>
+        <p>Desenvolvido. WDP, MSP, FMSM, FR &copy;2024</p>
+    </footer>
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script>
+        // Modelo de regressão linear
+        const model = tf.sequential();
+        model.add(tf.layers.dense({ units: 1, inputShape: [1] }));
+
+        // Compilando o modelo
+        model.compile({ optimizer: 'sgd', loss: 'meanSquaredError' });
+
+        // Dados de treinamento (preço da casa vs. número de quartos)
+        const xs = tf.tensor2d([1, 2, 3, 4, 5, 6], [6, 1]);
+        const ys = tf.tensor2d([150000, 200000, 500000, 600000, 700000, 1000000], [6, 1]);
+
+        // Treinando o modelo
+        async function trainModel() {
+            await model.fit(xs, ys, { epochs: 1000 });
+            console.log('Modelo treinado!');
+        }
+
+        // Fazendo previsões com o modelo treinado
+        function preverPreco() {
+            if (document.getElementById('txtInput').value == "") {
+                alert("Erro: Campo vazio!");
+            } else {
+                const numQuartos = parseInt(document.getElementById('txtInput').value);
+                const input = tf.tensor2d([[numQuartos]]);
+                const output = model.predict(input);
+                const precoPrevisto = output.dataSync()[0];
+                document.getElementById('resposta').innerHTML = `<p>Preço Previsto: R$${precoPrevisto.toFixed(2)}</p>`;
+            }
+        }
+
+        // Treinando o modelo ao carregar a página
+        trainModel();
+    </script>
+</body>
+
+</html>

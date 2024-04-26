@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat bot</title>
+    <link rel="stylesheet" href="css/chatbot.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="container" id="nav-container">
+            <!--add essa class-->
+            <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+                <div id="titulo">Chat Bot</div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
+                    aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" id="contact-menu" href="index.html">Voltar</a>
+                        <a class="nav-item nav-link a" id="home-menu" href="inteligenciaArtificial.html">Inteligência artificial</span></a>
+                        <a class="nav-item nav-link" id="contact-menu" href="machineLearning.html">Machine Learning</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div id="div-geral">
+        <h2>Um pouco mais sobre Chat Bots</h2>
+        <div id="div-img">
+            <img src="imgs/chatbot.PNG" alt="">
+        </div>  
+        <p class="texto-p">
+            Os chatbots são programas de computador projetados para simular conversas com humanos por meio de interfaces
+            de mensagens, como bate-papo em sites, aplicativos de mensagens ou até mesmo por voz. Eles são alimentados
+            por inteligência artificial e podem ser utilizados em uma variedade de contextos, desde atendimento ao
+            cliente até assistentes pessoais virtuais.
+        </p>
+        <p class="texto-p">
+            Os chatbots são capazes de compreender perguntas e comandos dos usuários, processar essa informação e
+            fornecer respostas relevantes ou executar tarefas específicas. Eles podem ser programados para seguir
+            roteiros predefinidos ou podem utilizar algoritmos de aprendizado de máquina para melhorar suas habilidades
+            de conversação ao longo do tempo.
+        </p>
+        <p class="texto-p">
+            Existem diferentes tipos de chatbots, incluindo os baseados em regras, que seguem um conjunto fixo de
+            instruções, e os baseados em inteligência artificial, que podem aprender com interações passadas e adaptar
+            suas respostas de acordo com o contexto.
+        </p>
+        <p class="texto-p">
+            Os chatbots têm sido amplamente adotados por empresas de diversos setores para melhorar a eficiência
+            operacional, oferecer suporte ao cliente 24/7, automatizar tarefas repetitivas e proporcionar uma
+            experiência personalizada aos usuários.
+        </p>
+        <p class="texto-p">
+            Embora os chatbots tenham avançado significativamente nos últimos anos, ainda enfrentam desafios, como
+            compreensão de linguagem natural mais precisa, capacidade de lidar com conversas complexas e garantir a
+            privacidade e segurança dos dados dos usuários. No entanto, sua popularidade continua a crescer à medida que
+            a tecnologia evolui e mais empresas reconhecem seu potencial para transformar a maneira como interagem com
+            os clientes e usuários.
+        </p>
+        <h3>Exemplo de código de chatbot:</h3>
+        <p>O código abaixo é um exemplo de chatbot feito em Python.</p>
+        <div id="div-grid">
+            <div class="div-codigos">
+                <ul>
+                    <li>from flask import Flask, request, render_template</li>
+                    <li>import random</li>
+                    <li></li>
+                    <li>app = Flask(__name__)</li>
+                    <li></li>
+                    <li># Definindo as saudações</li>
+                    <li>saudacoes_usuario = ["oi", "olá", "eae", "opa"]</li>
+                    <li>saudacoes_bot = ["Olá!", "Oi, como posso ajudar?", "Oi, tudo bem?", "Olá, o que você gostaria de
+                        saber?"]</li>
+                    <li></li>
+                    <li># Simulando um estoque</li>
+                    <li>estoque = {</li>
+                    <li>"borracha": 10,</li>
+                    <li>"caneta": 20,</li>
+                    <li>"caderno": 15</li>
+                    <li>}</li>
+                    <li></li>
+                    <li># Perguntas e respostas adicionais</li>
+                    <li>perguntas_respostas = {</li>
+                    <li>"clima": "Para informações sobre o clima, recomendo verificar um serviço de previsão do tempo.",
+                    </li>
+                    <li>"horario": "Nosso horário de funcionamento é de segunda a sexta, das 9h às 18h.",</li>
+                    <li>"preco": "Os preços dos produtos podem variar. Você gostaria de saber o preço de algum produto
+                        específico?",</li>
+                    <li>"ajuda": "Posso ajudar com informações sobre o estoque, horário de funcionamento ou qualquer
+                        outra dúvida que você tenha."</li>
+                    <li>}</li>
+                    <li></li>
+                    <li>@app.route('/chatbot', methods=['POST'])</li>
+                    <li>def chatbot():</li>
+                    <li>mensagem = request.form['mensagem'].lower()</li>
+                    <li></li>
+                    <li>if mensagem in saudacoes_usuario:</li>
+                    <li>resposta_bot = random.choice(saudacoes_bot)</li>
+                    <li>elif "estoque" in mensagem:</li>
+                    <li>item = mensagem.split()[-1]</li>
+                    <li>if item in estoque:</li>
+                    <li>resposta_bot = f"No momento, temos {estoque[item]} unidades de {item} em estoque."</li>
+                    <li>else:</li>
+                    <li>resposta_bot = f"Desculpe, não temos informações de estoque para {item}."</li>
+                    <li>else:</li>
+                    <li>resposta_bot = f"Desculpe, não temos informações de estoque para {item}."</li>
+                    <li>else:</li>
+                    <li>resposta_bot = perguntas_respostas.get(mensagem, "Desculpe, eu não entendi. Poderia repetir, por
+                        favor?")</li>
+                    <li></li>
+                    <li>return resposta_bot</li>
+                    <li></li>
+                    <li>@app.route('/')</li>
+                    <li>def home():</li>
+                    <li>return render_template('index.html')</li>
+                    <li></li>
+                    <li>if __name__ == "__main__":</li>
+                    <li>app.run(debug=True)</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Vamos entender o código.</h3>
+                <p>
+                <h5>1. Importando Bibliotecas:</h5>
+                Primeiro, precisamos importar algumas bibliotecas do Python que serão úteis para nosso chatbot.
+                Flask é uma delas. É uma biblioteca muito popular para criar aplicativos web em Python. Também
+                estamos importando request, que nos permitirá lidar com as solicitações HTTP, e render_template, que
+                usaremos para renderizar páginas HTML.
+                </p>
+                <p>
+                <h5>2. Definindo Saudações:</h5>
+                estamos definindo algumas saudações padrão para o usuário e suas correspondentes respostas do
+                chatbot. Por exemplo, se o usuário disser "oi", o chatbot responderá com uma saudação aleatória,
+                como "Olá!" ou "Oi, como posso ajudar?".
+                </p>
+                <p>
+                <h5>3. Simulando um Estoque:</h5>
+                Para tornar nosso chatbot um pouco mais interessante, simulamos um estoque de produtos usando um
+                dicionário. Cada produto (como "borracha", "caneta" e "caderno") tem uma quantidade disponível associada
+                a ele.
+                </p>
+                <p>
+                <h5>4. Perguntas e Respostas Adicionais:</h5>
+                Além de lidar com saudações e consultas de estoque, nosso chatbot também pode responder a algumas
+                perguntas adicionais. Aqui, definimos um dicionário onde as chaves são algumas perguntas que o usuário
+                pode fazer, e os valores são as respostas correspondentes do chatbot.
+                </p>
+                <p>
+                <h5>5. Criando uma Rota para o Chatbot:</h5>
+                Agora vem a parte interessante! Criamos uma rota no nosso aplicativo web chamada '/chatbot'. Esta rota
+                espera receber mensagens do usuário por meio de uma solicitação POST. Quando uma mensagem é recebida, o
+                chatbot verifica se é uma saudação, uma consulta de estoque ou uma pergunta adicional e responde
+                adequadamente.
+                </p>
+                <p>
+                <h5>6. Manipulando as Mensagens do Usuário:</h5>
+                Dentro da função associada à rota '/chatbot', pegamos a mensagem enviada pelo usuário e a transformamos
+                em minúsculas para facilitar a comparação. Em seguida, verificamos se é uma saudação, uma consulta de
+                estoque ou uma pergunta adicional e geramos uma resposta apropriada.
+                </p>
+                <p>
+                <h5>7. Rota Padrão:</h5>
+                Também definimos uma rota padrão ('/') que simplesmente renderiza uma página HTML chamada 'index.html'. 
+                Esta é a página inicial do nosso chatbot.
+                </p>
+                <p>
+                <h5>8. Executando o Aplicativo:</h5>
+                8. Executando o Aplicativo:
+                Finalmente, iniciamos o aplicativo Flask para que ele possa começar a lidar com as solicitações dos
+                usuários.
+                </p>
+            </div>
+        </div>
+        <h2 id="titulo-chat">Tepois de toda a explição e hora de ver o Código funcionando:</h2>
+        <p id="p-chatbot">Este chatbot foi modificado para responder perguntas sobre chatbos.</p>
+        <div id="codigo-exe">
+            <div id="div-chat">
+                <p id="resposta"></p>
+            </div>
+            <form id="chatForm">
+                <input type="text" id="txtPergunta" required>
+                <button id="btn-enviar" type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <!--Rado pe-->
+    <footer>
+        <p>Desenvolvido. WDP, MSP, FMSM, FR &copy;2024</p>
+    </footer>
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+
+</html>

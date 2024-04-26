@@ -1,0 +1,177 @@
+/*Cores*/
+:root {
+    --base: rgb(0, 132, 255);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#div-geral {
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 90%;
+}
+
+/*Cabecalho*/
+header,
+.navbar {
+    background-color: var(--base);
+}
+
+#titulo {
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    font-weight: bold;
+}
+
+/*Textos*/
+.texto-p {
+    text-align: justify;
+}
+
+#div-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+}
+
+.div-codigos {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 600px;
+    font-size: 14px;
+    color: #000;
+}
+
+/*Chat bot*/
+#titulo-chat {
+    text-align: center;
+}
+
+#div-img {
+    text-align: center;
+    border-radius: 10px;
+}
+
+#codigo-exe {
+    border: #000 1px solid;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 700px;
+}
+
+#div-chat {
+    margin: 0 auto;
+    width: 95%;
+    height: 200px;
+    overflow: auto;
+}
+
+#chatForm {
+    width: 95%;
+    margin: 0 auto;
+}
+
+#chatForm>input {
+    width: 80%;
+    margin-bottom: 5px;
+}
+
+#liResposta,
+#pergunta {
+    list-style-type: none;
+}
+
+#pergunta {
+    text-align: right;
+}
+
+#liResposta {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#chatForm>button {
+    width: 14%;
+    background-color: green;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#p-chatbot {
+    text-align: center;
+}
+
+/*Rado pe*/
+footer {
+    background-color: var(--base);
+    position: absolute;
+    bottom: -1;
+    width: 100%;
+}
+
+footer>p {
+    color: #fff;
+    text-align: center;
+    margin-top: 0.8%;
+}
+
+@media (max-width: 900px) {
+    #div-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .div-codigos {
+        width: 99%;
+    }
+
+    #codigo-exe {
+        width: 99%;
+    }
+
+    #chatForm>input {
+        width: 77%;
+    }
+
+    #chatForm>button {
+        width: 20%;
+    }
+
+    #div-img> img {
+        width: 95%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    #div-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .div-codigos {
+        width: 99%;
+    }
+
+    #codigo-exe {
+        width: 99%;
+    }
+
+    #chatForm>input {
+        width: 77%;
+    }
+
+    #chatForm>button {
+        width: 20%;
+    }
+
+    #div-img> img {
+        width: 95%;
+    }
+}
