@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola de Cursos online</title>
+    <link rel="stylesheet" href="CSS/Style-index.css">
+</head>
+
+<body>
+    <!--Cabecalho-->
+    <header>
+        <nav>
+            <h1>Cursos online BR</h1>
+            <div id="navbar-div">
+                <a class="nav-link" href="leads.html">Cursos</a>
+            </div>
+            <div class="dropdown">
+                <span>Login</span>
+                <div class="dropdown-content">
+                    <form id="loginForm">
+                        <label class="dropLabel" for="username">Nome</label>
+                        <input type="text" id="username" placeholder="Nome usuário" class="login-input">
+                        <label class="dropLabel" for="Senha">Senha</label>
+                        <input type="password" id="password" placeholder="Senha" class="login-input">
+                        <button id="dropSubmit" type="submit">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Corpo-->
+    <section id="apresentacao">
+        <div>
+            <h2>Bem Vindo(a)!</h2>
+            <p>A Escola Cursos online BR</p>
+            <p></p>
+        </div>
+        <div>
+            <img id="img-scola" src="img/predio1.jpg" alt="Imag da Escola">
+        </div>
+    </section>
+    
+    <section id="divicao">
+        <h4>Faça o seu cadastro Agora!. Venha fazer parte da nossa escola</h4>
+    </section>
+
+    <section id="formRegistro">
+        <div id="RegDiv">
+            <h2 id="titelReg">Cadastro:</h2>
+            <form action="http://localhost:3000/dados" method="POST">
+                <label class="labelReg" for="name">Nome:</label>
+                <input class="inputReg" type="text" id="name" name="name" required>
+                <label class="labelReg" for="email">Email:</label>
+                <input class="inputReg" type="text" id="email" name="email" required>
+                <label class="labelReg" for="celular">Celular:</label>
+                <input class="inputReg" type="text" id="celular" name="celular" required>
+                <label class="labelReg" for="genero">Gênero:</label>
+                <input class="inputReg" type="text" id="genero" name="genero" list="genero" required><br>
+                <input type="checkbox" id="lgpd" name="lgpd" required>
+                <label for="lgpd">Aceito os termos de uso e política de privacidade</label>
+                <input id="RegSub" type="submit" value="ENVIAR">
+            </form>
+        </div>
+    </section>
+    
+    <section id="divicao">
+        <h2>Conheça nossos Cursos</h2>
+    </section>
+
+    <section id="sectionCard">
+        
+        <div id="CardeCurso">
+            <div class="card">
+                <img class="imgGrid" src="img/html-logo.png" alt="logo do HTML">
+                <h3>Curso Completo de Html</h3>
+                <p>
+                    Aprenda tudo sobre html linha a linha 
+                    com aulas praticas com revisão
+                </p>
+                <button class="cardBtn" id="#">Conheça mais</button>
+            </div>
+            <div class="card">
+                <img class="imgGrid" src="img/css-logo.png" alt="logo do Css">
+                <h3>Curso Completo de Css</h3>
+                <p>
+                    Aprenda tudo sobre html linha a linha 
+                    com aulas praticas com revisão
+                </p>
+                <button class="cardBtn" id="#">Conheça mais</button>
+            </div>
+            <div class="card">
+                <img class="imgGrid" src="img/js-logo.png" alt="logo do javascript">
+                <h3>Curso Completo de javascript</h3>
+                <p>
+                    Aprenda tudo sobre html linha a linha 
+                    com aulas praticas com revisão
+                </p>
+                <button class="cardBtn" id="#">Conheça mais</button>
+            </div>
+            <!--
+            <div class="card">
+                <img class="imgGrid" src="" alt="logo do javascript">
+                <h3>Curso Full Stack</h3>
+                <p>
+                    Recomendado para quem já tem conhecimento em programação e quer ter um conhecimento em desenvolvimento web
+                </p>
+                <button class="cardBtn" id="#">Conheça mais</button>
+            </div>-->
+        </div>
+    </section>
+    <!--Roda pé-->
+    <footer>
+        <div class="container">
+            <p>© 2023 JS Academy. Todos os direitos reservados.</p>
+            <p>CNPJ: 12.345.678/0001-90</p>
+            <p>Contato: (11) 98765-4321 | contato@jsacademy.com.br</p>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

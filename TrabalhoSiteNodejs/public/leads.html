@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leads Full Stack JavaScript</title>
+    <link rel="stylesheet" href="CSS/Style-leads.css">
+</head>
+
+<body>
+    <!--Cabecalho-->
+    <header>
+        <nav>
+            <h1>Full Stack JavaScript</h1>
+            <a class="navLink" href="index.html">Voltar</a>
+        </nav>
+    </header>
+
+    <!--Corpo-->
+    <section class="course-advertisement">
+
+        <h2>Curso Full Stack JavaScript</h2>
+        <p>
+            omine o desenvolvimento web moderno com o nosso curso completo de JavaScript Full Stack! Do front-end ao
+            back-end, você aprenderá tudo o que é necessário para se tornar um desenvolvedor de elite.
+        </p>
+
+        <div class="container">
+            <div class="Descricao">
+                <ul>
+                    <li>Entendimento profundo de JavaScript ES6+.</li>
+                    <li>Frameworks populares como React, Angular e Vue.</li>
+                    <li>Node.js, Express e MongoDB no back-end.</li>
+                    <li>Projetos práticos e implementações do mundo real.</li>
+                </ul>
+            </div>
+
+            <div class="image-scrollbar">
+                <img class="imgs-cursos" src="img/css-logo.png" alt="Curso imagem 1">
+                <img class="imgs-cursos" src="img/js-logo.png" alt="Curso imagem 2">
+                <img class="imgs-cursos" src="img/html-logo.png" alt="Curso imagem 3">
+            </div>
+        </div>
+    </section>
+    <section id="Divisao">
+        <h4>
+            Cadastre-se ja e Ganhe 30% de Desconto.
+        </h4>
+    </section>
+
+    <datalist id="genero">
+        <option value="feminino">
+        <option value="masculino">
+        <option value="não_informado">
+    </datalist>
+
+    <section>
+        <div id="containerForm">
+            <h1>Inscreva-se:</h1>
+            <form action="http://localhost:3000/dados" method="POST">
+                <label class="labelForm" for="name">Nome:</label>
+                <input class="inputForm" type="text" id="name" name="name" required>
+                <label class="labelForm" for="email">Email:</label>
+                <input class="inputForm" type="text" id="email" name="email" required>
+                <label class="labelForm" for="celular">Celular:</label>
+                <input class="inputForm" type="text" id="celular" name="celular" required>
+                <label class="labelForm" for="genero">Gênero:</label>
+                <input type="text" id="genero" name="genero" list="genero" required><br><br>
+                <input type="checkbox" id="lgpd" name="lgpd" required>
+                <label for="lgpd">Aceito os termos de uso e política de privacidade</label>
+                <input type="submit" value="ENVIAR">
+            </form>
+        </div>
+    </section>
+
+    <!--Roda pe-->
+    <footer>
+        <div id="container-footer">
+            <p>© 2023 JS Academy. Todos os direitos reservados.</p>
+            <p>CNPJ: 12.345.678/0001-90</p>
+            <p>Contato: (11) 98765-4321 | contato@jsacademy.com.br</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

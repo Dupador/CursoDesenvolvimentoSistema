@@ -1,0 +1,154 @@
+/*Geral*/
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/*Tabela*/
+table {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+table> tbody> tr> td {
+    font-size: 100%;
+    padding: 5px;
+}
+
+td {
+    border: 2px solid #000;
+}
+
+th {
+    padding: 10px 50px;
+    background-color: #007BFF;
+    border: 2px solid #000;
+    color: #fff;
+    font-size: 1rem;
+    font-family: bold;
+}
+
+td {
+    padding: 10px 50px;
+    border-top: 1px solid #ddd;
+    font-size: 10px;
+    text-align: center;
+}
+
+.modal-content {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-nav{
+    display: inline;
+    text-align: center;
+    margin: 20px auto;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    max-width: 150px;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.btn-nav:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.navLogout:hover {
+    background-color: red;
+}
+
+/*Modal*/
+button {
+    padding: 0.6rem 1.2rem;
+    background-color: #0056b3;;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+    transform: 0.4s;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 5;
+}
+
+#modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    z-index: 10;
+    width: 500px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+}
+
+#fade, #modal {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.modal-body p {
+    margin-bottom: 1rem;
+}
+
+#modal.hide,#fade.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal-hide {
+    top: 0;
+}
+
+.input-modal {
+   width: 90%;
+   margin: 15px 0;
+}
+
+.input-btn{
+    margin: 15px 0 0 0;
+}
