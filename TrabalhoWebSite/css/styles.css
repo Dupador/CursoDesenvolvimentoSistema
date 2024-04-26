@@ -1,0 +1,24 @@
+.container-fluid {
+    background-color: #5f9ea0;
+}
+
+#div-img {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#p-div {
+    width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+#div-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 10px;
+}
+
+#div-section>div {
+    margin: 0 auto;
+}
