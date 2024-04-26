@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador HTML</title>
+</head>
+<body>
+    <h2>Comparador HTML</h2>
+    <form method="post" action="comparador.php">
+        <input type="text" name="valor1" placeholder="Digite o primeiro valor" required><br>
+        <input type="text" name="valor2" placeholder="Digite o segundo valor" required><br>
+        <select name="operacao">
+            <option value="igual">Igualdade (==)</option>
+            <option value="identico">Idêntico (===)</option>
+            <option value="nao_igual">Não igual (!=)</option>
+            <option value="diferente">Diferente (<> ou !=)</option>
+            <option value="nao_identico">Não idêntico (!==)</option>
+            <option value="menor">Menor (<)</option>
+            <option value="maior">Maior (>)</option>
+            <option value="menor_igual">Menor ou igual (<=)</option>
+            <option value="maior_igual">Maior ou igual (>=)</option>
+        </select><br>
+        <input type="submit" value="Comparar">
+    </form>
+</body>
+</html>
